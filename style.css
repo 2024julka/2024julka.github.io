@@ -5,7 +5,7 @@ body {
     font-family: 'orbitron';
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
     overflow: hidden;
@@ -42,6 +42,7 @@ body::before {
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid #9b59b6;
+    margin-top: 100px;
     border-radius: 10px;
     box-shadow: 0 0 20px #6a0dad, 0 0 60px #9b59b6;
     width: 80%;
