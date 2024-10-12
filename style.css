@@ -1,0 +1,148 @@
+/* Całe ciało strony */
+body {
+    background: radial-gradient(circle at top, #000000, #1e1e1e);
+    color: #d2b5ff;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Gwiazdy na tle */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png') repeat;
+    opacity: 0.1;
+    z-index: 1;
+    animation: moveStars 30s linear infinite;
+}
+
+/* Animacja ruchu gwiazd */
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1000px 1000px;
+    }
+}
+
+/* Kontener */
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #9b59b6;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #6a0dad, 0 0 60px #9b59b6;
+    width: 80%;
+    max-width: 600px;
+    z-index: 2;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Neonowy nagłówek z efektem migotania */
+h1 {
+    font-size: 3em;
+    color: #d2b5ff;
+    text-shadow: 0 0 10px #9b59b6, 0 0 20px #6a0dad, 0 0 40px #6a0dad;
+    margin-bottom: 20px;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Paragrafy */
+p {
+    font-size: 1.2em;
+    color: #d2b5ff;
+    text-shadow: 0 0 5px #9b59b6, 0 0 10px #6a0dad;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animacja fadeIn dla pojawiania się elementów */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pola input */
+input {
+    padding: 10px;
+    border: 2px solid #6a0dad;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #1e1e1e;
+    color: #d2b5ff;
+    text-shadow: 0 0 5px #9b59b6, 0 0 10px #6a0dad;
+    box-shadow: 0 0 10px #6a0dad;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Stylizacja przycisków */
+button {
+    padding: 12px 20px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-shadow: 0 0 5px #9b59b6;
+    box-shadow: 0 0 10px #9b59b6, 0 0 20px #6a0dad;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+button:hover {
+    background-color: #9b59b6;
+    box-shadow: 0 0 20px #9b59b6, 0 0 40px #6a0dad;
+    transform: scale(1.05);
+}
+
+/* Stylizacja wiadomości */
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #d2b5ff;
+    text-shadow: 0 0 10px #9b59b6;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Stylizacja obrazów */
+.game-image {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #6a0dad;
+    box-shadow: 0 0 15px #9b59b6, 0 0 30px #6a0dad;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
