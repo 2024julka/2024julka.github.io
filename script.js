@@ -10,7 +10,7 @@ const codes = {
     "E": "8task.html",  
     "188": "9task.html", 
     "F": "10task.html",
-    "KFCPICNIC": "11task.html",
+    "KFC": "11task.html",
     "CHICKEN": "12task.html",
     "BOTTLED": "13task.html",
     "17:30": "14task.html",
